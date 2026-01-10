@@ -223,7 +223,7 @@ for node_id, stereo_pairs in dataset.get_node_images():
 ```yaml
 # Camera calibration
 camera:
-  focal_length: 700.0      # pixels
+  focal_length: 1081.8708395231049      # pixels
   baseline: 0.12           # meters
   image_width: 640
   image_height: 480
