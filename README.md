@@ -321,8 +321,26 @@ If you use LanBLoc in your research, please cite:
   title={Landmark-based Localization using Stereo Vision and Deep Learning in GPS-Denied Battlefield Environment}, 
   year={2024},
   pages={209-215},
-  keywords={Location awareness;Deep learning;Image recognition;Navigation;Wireless networks;Optimization methods;Predictive models;Landmark Recognition;YOLOv8;Stereo Vision;Non-GPS localization;DV-Hop Method;Battlefield Navigation},
+  keywords={Location awareness;Deep learning;Image recognition;Navigation;
+  Wireless networks;Optimization methods;Predictive models;
+  Landmark Recognition;YOLOv8;Stereo Vision;Non-GPS localization;
+  DV-Hop Method;Battlefield Navigation},
   doi={10.1109/WoWMoM60985.2024.00043}}
+  
+@INPROCEEDINGS {10440690,
+author = { Sapkota, Ganesh and Madria, Sanjay },
+booktitle = { 2023 IEEE Applied Imagery Pattern Recognition Workshop (AIPR) },
+title = {{ Landmark Stereo Dataset for Landmark Recognition and Moving Node Localization in a Non-GPS Battlefield Environment }},
+year = {2023},
+pages = {1-11},
+keywords = {YOLO;Navigation;Optimization methods;
+Mobile handsets;Pattern recognition;
+Stereo vision;Servers},
+doi = {10.1109/AIPR60534.2023.10440690},
+url = {https://doi.ieeecomputersociety.org/10.1109/AIPR60534.2023.10440690},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+month =sep}
 
 ```
 
