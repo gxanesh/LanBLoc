@@ -327,6 +327,8 @@ If you use LanBLoc in your research, please cite:
   DV-Hop Method;Battlefield Navigation},
   doi={10.1109/WoWMoM60985.2024.00043}}
   
+```
+```bibtex
 @INPROCEEDINGS {10440690,
 author = { Sapkota, Ganesh and Madria, Sanjay },
 booktitle = { 2023 IEEE Applied Imagery Pattern Recognition Workshop (AIPR) },
@@ -341,7 +343,6 @@ url = {https://doi.ieeecomputersociety.org/10.1109/AIPR60534.2023.10440690},
 publisher = {IEEE Computer Society},
 address = {Los Alamitos, CA, USA},
 month =sep}
-
 ```
 
 ## License
