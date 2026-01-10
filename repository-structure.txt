@@ -1,0 +1,28 @@
+lanbloc/
+├── README.md                    # Documentation with installation and usage
+├── LICENSE                      # MIT License
+├── .gitignore                   # Python-specific gitignore
+├── requirements.txt             # Dependencies
+├── setup.py                     # Package installation
+├── config/
+│   └── default_config.yaml      # Configuration file
+├── lanbloc/                     # Main package
+│   ├── core/
+│   │   ├── stereo_depth.py      # Algorithm 1: Stereo depth estimation
+│   │   ├── localization.py      # Algorithm 2: LanBLoc-3L
+│   │   └── trilateration.py     # Trilateration solver
+│   ├── detection/
+│   │   └── yolo_detector.py     # YOLOv11 landmark detection
+│   ├── calibration/
+│   │   └── camera.py            # Camera calibration utilities
+│   ├── utils/
+│   │   ├── coordinates.py       # Lat/lon ↔ XYZ transformations
+│   │   └── visualization.py     # Plotting functions
+│   └── data/
+│       ├── dataset.py           # StereoDataset & TrilatDataset
+│       └── landmark_db.py       # Landmark/Node databases
+├── scripts/
+│   ├── run_lanbloc.py           # CLI for localization
+│   ├── evaluate.py              # Batch evaluation
+│   └── visualize_results.py     # Generate figures
+└── tests/                       # Unit tests (5 test modules)

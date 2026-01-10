@@ -1,0 +1,140 @@
+# LanBLoc Default Configuration
+# ================================
+
+# Camera calibration parameters
+camera:
+  # Focal length in pixels
+  focal_length: 1081.8708395231049
+  fx: 1081.8708395231049
+  fy: 1081.8708395231049
+  cx: 373.12105178833008
+  cy: 38.21363639831543
+  # Stereo baseline in meters
+  baseline: 0.12
+  # Image dimensions
+  image_width: 640
+  image_height: 480
+  # Distortion coefficients (k1, k2, p1, p2, k3)
+  distortion_coeffs: [0.0, 0.0, 0.0, 0.0, 0.0]
+  # Camera matrix (if not provided, constructed from focal_length and image dims)
+  camera_matrix: null
+
+# Stereo matching parameters
+stereo:
+  # Algorithm: "BM" (Block Matching) or "SGBM" (Semi-Global Block Matching)
+  algorithm: "SGBM"
+  # Number of disparities (must be divisible by 16)
+  num_disparities: 128
+  # Block size for matching (odd number)
+  block_size: 11
+  # Minimum disparity
+  min_disparity: 0
+  # Disparity scale factor (OpenCV uses 16 for sub-pixel accuracy)
+  disp_scale: 16
+  # SGBM-specific parameters
+  sgbm:
+    # Penalty on disparity change by 1 between neighbor pixels
+    P1: 8
+    # Penalty on disparity change by more than 1 between neighbor pixels
+    P2: 32
+    # Maximum size of the disparity check
+    disp12_max_diff: 1
+    # Truncation value for prefiltered image pixels
+    prefilter_cap: 63
+    # Margin in percentage by which best cost should win second best
+    uniqueness_ratio: 10
+    # Maximum speckle size
+    speckle_window_size: 100
+    # Maximum speckle range
+    speckle_range: 32
+    # Mode: 0=SGBM, 1=HH, 2=SGBM_3WAY, 3=HH4
+    mode: 1
+
+# YOLO detection parameters
+detection:
+  # Model architecture
+  model: "yolo11s"
+  # Path to trained weights
+  weights: "weights/yolo11s_landmarks.pt"
+  # Confidence threshold for detections
+  confidence_threshold: 0.5
+  # IoU threshold for NMS
+  iou_threshold: 0.45
+  # Device: "cuda", "cpu", or specific GPU index
+  device: "cuda"
+  # Image size for inference
+  image_size: 640
+  # Maximum detections per image
+  max_detections: 100
+  # Class names (if using custom model)
+  class_names: null
+
+# Localization parameters
+localization:
+  # Minimum number of landmarks required (N_req)
+  min_landmarks: 3
+  # Minimum valid depth points in ROI (N_min)
+  min_valid_depth: 100
+  # Optimization method: "LBFGS-B", "Powell", "Nelder-Mead"
+  optimization_method: "LBFGS-B"
+  # Maximum optimization iterations
+  max_iterations: 1000
+  # Optimization tolerance
+  tolerance: 1e-8
+  # Initial position estimate method: "centroid", "weighted", "nearest"
+  initial_estimate: "centroid"
+
+# Coordinate system settings
+coordinates:
+  # Reference frame: "xyz" (Cartesian) or "latlon" (Geographic)
+  reference_frame: "xyz"
+  # Earth radius in km (for lat/lon to XYZ conversion)
+  earth_radius: 6371.0
+  # Output unit: "meters" or "kilometers"
+  output_unit: "meters"
+
+# Dataset settings
+dataset:
+  # Root directory for dataset
+  root_dir: "datasets/landmark_stereov1_corrupt"
+  # Number of trilateration sets
+  num_trilat_sets: 10
+  # Image format
+  image_format: "png"
+  # Stereo pair naming convention
+  naming_convention: "{node}_{sequence}.{format}"
+
+# Evaluation settings
+evaluation:
+  # Metrics to compute
+  metrics:
+    - "rmse"
+    - "mae"
+    - "median_error"
+    - "success_rate"
+  # Success threshold in meters
+  success_threshold: 1.0
+  # Output format: "json", "csv", "both"
+  output_format: "json"
+
+# Visualization settings
+visualization:
+  # Plot style
+  style: "seaborn"
+  # Figure size (width, height) in inches
+  figure_size: [10, 8]
+  # DPI for saved figures
+  dpi: 150
+  # Color scheme for landmarks
+  landmark_colors: "tab10"
+  # Show ground truth overlay
+  show_ground_truth: true
+
+# Logging settings
+logging:
+  # Log level: "DEBUG", "INFO", "WARNING", "ERROR"
+  level: "INFO"
+  # Log file path (null for console only)
+  file: null
+  # Log format
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
