@@ -170,3 +170,5 @@ Thumbs.db
 *.temp
 *.swp
 *~
+
+calibration_output/
