@@ -177,8 +177,8 @@ print(f"Estimated position: ({position.x:.2f}, {position.y:.2f})")
 ```bash
 # Run localization on a single stereo pair
 python scripts/run_lanbloc.py \
-    --left datasets/landmark_stereov1_corrupt/trilat1/landmark1/stereo_images/stereoL/1_img1.png\
-    --right datasets/landmark_stereov1_corrupt/trilat1/landmark1/stereo_images/stereoR/1_img1.png \
+    --left datasets/landmark_stereov1/trilat1/landmark1/stereo_images/stereoL/1_img1.png\
+    --right datasets/landmark_stereov1/trilat1/landmark1/stereo_images/stereoR/1_img1.png \
     --config config/default_config.yaml
 
 # Run evaluation on entire dataset
