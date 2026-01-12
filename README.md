@@ -158,7 +158,7 @@ from lanbloc import LanBLoc
 from lanbloc.data import LandmarkDatabase
 
 # Initialize landmark database
-landmark_db = LandmarkDatabase.from_dataset("datasets/landmark_stereov1_corrupt")
+landmark_db = LandmarkDatabase.from_dataset("datasets/landmark_stereov1")
 
 # Initialize LanBLoc
 lanbloc = LanBLoc(
