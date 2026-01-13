@@ -79,7 +79,7 @@ class LanBLoc:
         >>> from lanbloc import LanBLoc
         >>> from lanbloc.data import LandmarkDatabase
         >>> 
-        >>> db = LandmarkDatabase.from_dataset("data/landmark_stereov1_corrupt")
+        >>> db = LandmarkDatabase.from_dataset("data/landmark_stereov1")
         >>> lanbloc = LanBLoc(landmark_db=db)
         >>> 
         >>> result = lanbloc.localize(left_image, right_image)
@@ -151,7 +151,7 @@ class LanBLoc:
             
             det_config = self.config.get("detection", {})
             self._detector = YOLOLandmarkDetector(
-                weights=det_config.get("weights", "yolov8s.pt"),
+                weights=det_config.get("weights", "yolov11s.pt"),
                 confidence_threshold=det_config.get("confidence_threshold", 0.5),
                 device=det_config.get("device", "cuda")
             )
