@@ -96,7 +96,7 @@ coordinates:
 # Dataset settings
 dataset:
   # Root directory for dataset
-  root_dir: "datasets/landmark_stereov1_corrupt"
+  root_dir: "datasets/landmark_stereov1"
   # Number of trilateration sets
   num_trilat_sets: 10
   # Image format
