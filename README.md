@@ -267,14 +267,6 @@ python scripts/evaluate.py \
     --output results/evaluation.json
 ```
 
-### Example Results
-
-| Trilateration Set | RMSE (m) | MAE (m) | Success Rate |
-|-------------------|----------|---------|--------------|
-| trilat1           | 0.45     | 0.38    | 100%         |
-| trilat2           | 0.52     | 0.44    | 100%         |
-| ...               | ...      | ...     | ...          |
-
 ## Project Structure
 
 ```
