@@ -113,7 +113,7 @@ mkdir -p weights
 
 ## Dataset Structure
 
-LanBLoc uses the **Landmark StereoV1** dataset for validation. The dataset follows this structure:
+LanBLoc uses the **LandmarkStereoV1** dataset for validation. The dataset follows this structure:
 
 ```
 landmark_stereov1/
