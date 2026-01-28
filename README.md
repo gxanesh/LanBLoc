@@ -324,6 +324,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - OpenCV for stereo vision processing
 - NumPy and SciPy for numerical computations
 
-## Contact
-
-For questions or issues, please open an issue on GitHub or contact [gsapkota@mst.edu].
