@@ -151,29 +151,6 @@ landmark_stereov1/
 
 ## Usage
 
-### Basic Usage
-
-```python
-from lanbloc import LanBLoc
-from lanbloc.data import LandmarkDatabase
-
-# Initialize landmark database
-landmark_db = LandmarkDatabase.from_dataset("datasets/landmark_stereov1")
-
-# Initialize LanBLoc
-lanbloc = LanBLoc(
-    landmark_db=landmark_db,
-    yolo_weights="weights/yolo11_landmarks.pt",
-    camera_config="config/camera_calibration.yaml"
-)
-
-# Run localization
-position = lanbloc.localize(left_image, right_image)
-print(f"Estimated position: ({position.x:.2f}, {position.y:.2f})")
-```
-
-### Command Line Interface
-
 ```bash
 # Run localization on a single stereo pair
 python scripts/run_lanbloc.py \
