@@ -20,12 +20,12 @@
 
 LanBLoc addresses the challenge of localization in environments where GPS is unavailable or unreliable (e.g., urban canyons, indoor spaces, military operations). The framework:
 
-1. **Detects known landmarks** using a fine-tuned YOLOv11 model
+1. **Detects known landmarks** using a LanDet-Y11s model
 2. **Estimates distances** to detected landmarks using stereo depth computation
 3. **Computes position** via least-squares trilateration with LBFGS-B refinement
 
 ### Key Features
-- Real-time landmark detection using YOLOv11
+- Real-time landmark detection using LanDet-Y11s
 - Robust stereo depth estimation with median filtering
 - Least-squares trilateration with iterative refinement
 - Support for multiple coordinate systems (lat/lon, XYZ)
@@ -58,7 +58,7 @@ Output: Current 2D position (x, y)
 
 1. Capture and preprocess stereo pair
 2. Rectify and undistort images
-3. Detect landmarks using YOLOv11
+3. Detect landmarks using LanDet-Y11s
 4. For each detected landmark:
    - Look up known coordinates from database
    - Estimate distance using Algorithm 1
