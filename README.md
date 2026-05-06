@@ -1,9 +1,13 @@
 # LanBLoc: Landmark-Based Localization for GPS-Denied Environments
 
+<p align="center">
+  <img src="assets/lanbloc-dark.png" alt="LanBLoc" width="800">
+</p>
+
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**LanBLoc** is a visual localization framework that uses stereo vision and deep learning-based landmark recognition for position estimation in GPS-denied environments. The system combines YOLO-based landmark detection with stereo depth estimation and trilateration to achieve accurate 2D localization.
+**LanBLoc** is a visual localization framework that uses stereo vision and deep learning-based landmark recognition for position estimation in GPS-denied environments. The system combines YOLO-based landmark detection with stereo depth estimation and trilateration to achieve accurate ground localization.
 
 ## Table of Contents
 - [Overview](#overview)
